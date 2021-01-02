@@ -911,7 +911,6 @@ function main {
   password_input MYSQL_PASSWORD "Password (use something strong): " "MySQL password cannot be empty"
 
   valid_timezones="$(timedatectl list-timezones)"
-  echo "* List of valid timezones here $(hyperlink "https://www.php.net/manual/en/timezones.php")"
 
   while [ -z "$timezone" ] || [[ ${valid_timezones} != *"$timezone_input"* ]]; do
     echo -n "* Select timezone [Europe/Stockholm]: "
